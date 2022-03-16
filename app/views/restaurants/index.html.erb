@@ -1,0 +1,10 @@
+<h1>INDEX</h1>
+
+<ol>
+  <% @restaurants.each do |restaurant| %>
+    <li><%= link_to restaurant.name, restaurant_path(restaurant) %> ---------
+    </li> <%= link_to "Delete", restaurant_path(restaurant), method: :delete, data: { confirm: "Are you sure?" } %>
+  <% end %>
+</ol>
+
+ <%# <li><%= link_to "Create a New Article Here", new_article_path %></li> %>
